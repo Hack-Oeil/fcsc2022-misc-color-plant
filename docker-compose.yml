@@ -1,0 +1,42 @@
+services:
+  color-plant-modbus:
+    image: anssi/fcsc2022-misc-color-plant-modbus:latest
+    ports:
+      - "4502:502"
+    environment:
+      - POSTGRES_USER=fcsc2022
+      - POSTGRES_PASSWORD=Ookai2pai5kahrucohgahxualees9hie
+      - POSTGRES_DB=fcsc2022
+      - POSTGRES_HOST=color-plant-db
+    networks:
+      - color-plant-internal
+      - color-plant-external
+
+  color-plant-db:
+    image: anssi/fcsc2022-misc-color-plant-db:latest
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_USER=fcsc2022
+      - POSTGRES_PASSWORD=Ookai2pai5kahrucohgahxualees9hie
+      - POSTGRES_DB=fcsc2022
+    networks:
+      - color-plant-internal
+
+  color-plant-www:
+    image: anssi/fcsc2022-misc-color-plant-www:latest
+    ports:
+      - ${PORT}:8000
+    environment:
+      - POSTGRES_USER=fcsc2022
+      - POSTGRES_PASSWORD=Ookai2pai5kahrucohgahxualees9hie
+      - POSTGRES_DB=fcsc2022
+      - POSTGRES_HOST=color-plant-db
+    networks:
+      - color-plant-internal
+      - color-plant-external
+
+networks:
+  color-plant-external:
+  color-plant-internal:
+    internal: true

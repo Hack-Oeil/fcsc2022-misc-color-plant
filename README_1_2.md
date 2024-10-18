@@ -1,8 +1,12 @@
-# FCSC 2022 Color Plant
+# FCSC 2022 Color Plant 1/2
+
+Dans cette première partie du challenge **Color Plant**, vous manipulez une usine en production dans un système industriel via le procotole industriel Modbus. La première étape de ce challenge est de récupérer un token présent dans les registres de l’automate afin de pouvoir accèder à l’interface web SCADA. Pour cela, vous devez lire dans les registres de l’automate à l’aide du protocole Modbus et tenter de réassembler un token valide. Vous pourrez alors continuer la deuxième partie de l’épreuve.
+
+L’automate est exposé sur le port 4502.
 
 Cette épreuve a été découpée en deux parties :
 
-- [Color Plant 1/2](README_1_2.md)
+- **Color Plant 1/2**
 - [Color Plant 2/2](README_2_2.md)
 
 

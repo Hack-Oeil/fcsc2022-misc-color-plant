@@ -97,11 +97,11 @@ Pour cela, elle est constituée de 5 cuves, 5 vannes et 4 régulateurs de débit
 **Important.**
 La couleur des cuves suit le système de coloration RGB. Il peut paraître surprenant que le mix d'une seule unité verte et d'une seule unité rouge ne donne pas la couleur attendue (jaune) car en effet dans ce système de codage, la couleur `RGB(1,1,0)` donne une couleur noire mais ceci n'a aucune incidence sur la résolution des épreuves.
 
-<br>
+&lt;br>
 
-<img src="colorplant.png" />
+&lt;img src="colorplant.png" />
 
-<br>
+&lt;br>
 
 L'usine `Color Plant` est contrôlée par un automate dont la liste des registres modbus est donnée ci-dessous :
 
@@ -129,7 +129,7 @@ L'usine `Color Plant` est contrôlée par un automate dont la liste des registre
 | Input Register      |             |  10    |            | Nombre total d'unités R, G ou B dans la cuve `F`|            | lecture             |
 | Discret Input       |             |  0     |            | Ouverture vanne cuve mix haute                  |            | lecture             |
 
-<br>
+&lt;br>
 
 De plus, un automate de "safety" est en charge de contrôler que le procédé industriel ne mette pas en danger le bon fonctionnement de l'usine. Pour cela, celui-ci :
 -   Ferme automatiquement les vannes des cuves `R`, `G` et `B` si la cuve mix est pleine.
